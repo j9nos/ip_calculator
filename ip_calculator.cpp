@@ -5,22 +5,13 @@ class IP
 private:
     std::string address;
     int mask;
-
     bool can_proceed = 0;
-
     std::string binarized_address = "";
 
     bool is_address_valid(std::string arg_address)
     {
         std::regex ipv4("(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])");
-        if (std::regex_match(arg_address, ipv4))
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
+        return (std::regex_match(arg_address, ipv4));
     }
     bool is_mask_valid(int arg_mask)
     {
