@@ -33,8 +33,7 @@ private:
         std::sscanf(address.c_str(), "%d.%d.%d.%d", &splitted_address[0], &splitted_address[1], &splitted_address[2], &splitted_address[3]);
         for (int i = 0; i < 4; i++)
         {
-            std::bitset<8> bs(splitted_address[i]);
-            binarized_address += bs.to_string();
+            binarized_address += std::bitset<8>(splitted_address[i]).to_string();
         }
     }
     void calc_netmask()
