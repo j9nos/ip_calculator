@@ -1,3 +1,12 @@
 # ip_calculator
-The result of 192.168.1.50/24 : 
-![alt text](screenshots/screenshot1.png)
+
+
+**to compile**
+```
+g++ ip_calculator.cpp -o calc
+```
+
+**to run**
+```
+./calc.exe
+```
